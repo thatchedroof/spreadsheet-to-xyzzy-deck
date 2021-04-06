@@ -13,7 +13,7 @@ calls = list(ass[1]) + list(ass[2]) + list(ass[3])
 deck = {
     'name':'ass deck', 
     'description':'trol', 
-    'watermark':'ass', 
+    'watermark':'ASS42', 
     'calls':[
         {
             'text':card.split('____')
