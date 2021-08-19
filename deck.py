@@ -18,7 +18,7 @@ deck = {
     'calls':[
         {
             'text':card.split('____')
-        } for card in calls if card != None
+        } for card in calls if (card != None and card != '')
     ],
     'responses':[
         {'text':[card]} for card in responses if card != ''
