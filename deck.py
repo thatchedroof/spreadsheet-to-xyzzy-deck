@@ -1,3 +1,4 @@
+# %%
 import pandas as pd
 import json
 
@@ -11,13 +12,13 @@ responses = list(ass[0])
 calls = list(ass[1]) + list(ass[2]) + list(ass[3])
 
 deck = {
-    'name':'ass deck', 
-    'description':'trol', 
-    'watermark':'ASS42', 
+    'name':'ass deck',
+    'description':'trol',
+    'watermark':'ASS42',
     'calls':[
         {
             'text':card.split('____')
-        } for card in calls if card != ''
+        } for card in calls if card != None
     ],
     'responses':[
         {'text':[card]} for card in responses if card != ''
@@ -26,3 +27,4 @@ deck = {
 
 with open('deck.json', 'w') as deckfile:
     deckfile.write(json.dumps(deck, indent=2))
+# %%
